@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,700&family=Montserrat:wght@400;700&family=Outfit:wght@300;400;600;700&family=Poppins:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.contenedor-ilustraciones {
+    width: 60%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.blob {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    height: 90%;
+}
+
+.contenedor-ilustraciones :nth-child(1) {
+    position: absolute;
+    left: 0px;
+    bottom: 40px;
+    height: 90%;
+}
+
+.contenedor-textos {
+    width: 40%;
+    text-align: center;
+}
+
+.contenedor-textos h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.contenedor-textos p {
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+.cta {
+    display: inline-block;
+    background: steelblue;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: all .3s;
+    min-width: 150px;
+}
+
+.cta:hover {
+    transform: scale(1.1);
+}
+
+.cta:active {
+    background: rgb(51, 102, 145);   
+    transform: scale(1); 
+}
+
+@media screen and (max-width: 1880px) {
+    .contenedor-ilustraciones :nth-child(1) {
+        width: 100%;
+    }
+
+    .blob {
+        width: 100%;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .blob {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .contenedor {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    .contenedor-ilustraciones, .contenedor-textos {
+        width: 100%;
+    }
+
+    .contenedor-ilustraciones {
+        height: 60%;
+    }
+
+    .contenedor-textos {
+        height: 50%;
+    }
+    
+    .contenedor-ilustraciones {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .contenedor-textos h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .contenedor-ilustraciones {
+        height: 50%;
+    }
+
+    .cta {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .contenedor-ilustraciones {
+        height: 40%;
+    }
+
+    .contenedor-ilustraciones :nth-child(1), .blob {
+        bottom: 0;
+    }
+}

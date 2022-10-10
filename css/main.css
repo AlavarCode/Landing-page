@@ -94,6 +94,14 @@ body {
     .blob {
         width: 90%;
     }
+
+    .cta:hover {
+        transform: none;
+    }
+
+    .cta:active {
+        transform: scale(.9);
+    }
 }
 
 @media screen and (max-width: 640px) {
